@@ -1,0 +1,157 @@
+STATISTICAL SUMMARY 
+BY UKEME EDWARD ENIANG
+
+# Calculate basic statistical metrics for each feature
+statistical_summary = iris.describe()
+
+This line calculates a statistical summary of the DataFrame iris, which typically includes metrics like count, mean, standard deviation, min, 25th percentile, median (50th percentile), 75th percentile, and max for each numeric feature in the dataset. The result is stored in the variable statistical_summary. 
+
+----------
+
+# Extracting mean, median, and standard deviation for numeric columns only
+mean_values = iris[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']].mean()
+
+
+Here, the code selects specific columns (sepal_length, sepal_width, petal_length, and petal_width) from the iris DataFrame and calculates their mean. The result is stored in the variable mean_values. 
+
+
+
+median_values = iris[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']].median()
+
+This line does the same as the previous line, but instead calculates the median for the specified columns. The result is stored in the variable median_values 
+
+
+
+std_dev_values = iris[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']].std()
+
+
+Similarly, this line calculates the standard deviation for the selected columns in the iris DataFrame and stores the results in std_dev_values. 
+
+
+# Display results
+print("Statistical Summary:\n", statistical_summary)
+
+This line prints out the statistical summary calculated earlier, providing an overview of the basic statistics for all features in the dataset. 
+
+
+
+print("\nMean Values:\n", mean_values)
+
+
+This prints the mean values for the specified features, formatted with a newline for clarity. 
+
+
+
+print("\nMedian Values:\n", median_values)
+
+
+This prints the median values for the specified features, also with a newline for better readability. 
+
+
+
+print("\nStandard Deviation Values:\n", std_dev_values)
+
+
+Finally, this line prints the standard deviation values for the selected features, maintaining the format with a newline
+
+
+
+
+SUMMARY OF RESULTS
+
+
+
+
+Here’s a comprehensive explanation and summary of the statistical summary findings from the Iris dataset.
+
+### Statistical Summary
+
+The dataset contains measurements of 150 iris flowers, focusing on four key attributes: **sepal length**, **sepal width**, **petal length**, and **petal width**. Each attribute is described by several statistical metrics.
+
+Key Metrics:
+1. Count: 
+   - All attributes have a count of 150, indicating that the dataset is complete with no missing values.
+
+2. Mean: 
+   - Sepal Length: 5.84 cm
+   - Sepal Width: 3.06 cm
+   - Petal Length: 3.76 cm
+   - Petal Width: 1.20 cm
+   - The means indicate the average measurements for each attribute across all samples.
+
+3. Standard Deviation (std):
+   - Sepal Length: 0.83 cm
+   - Sepal Width: 0.44 cm
+   - Petal Length: 1.77 cm
+   - Petal Width: 0.76 cm
+   - Standard deviation measures the dispersion of the measurements. A higher standard deviation in petal length suggests more variability in this attribute compared to the others.
+
+
+
+4. Minimum (min):
+   - Sepal Length: 4.30 cm
+   - Sepal Width: 2.00 cm
+   - Petal Length: 1.00 cm
+   - Petal Width: 0.10 cm
+   - These values represent the smallest recorded measurements in the dataset.
+
+5. 25th Percentile (25%):
+   - This value indicates that 25% of the data points fall below these values. (it represents the lower part of the data set) 
+   - Sepal Length: 5.10 cm
+   - Sepal Width: 2.80 cm
+   - Petal Length: 1.60 cm
+   - Petal Width: 0.30 cm
+
+
+6. Median (50%):
+   - Sepal Length: 5.80 cm
+   - Sepal Width: 3.00 cm
+   - Petal Length: 4.35 cm
+   - Petal Width: 1.30 cm
+   - The median represents the middle value when the data is sorted, providing a measure that is less affected by outliers. (it splits the data into two equal halves)
+
+7. 75th Percentile (75%):
+   - This indicates that 75% of the data points fall below these values. (it represents the upper part of the data set)
+   - Sepal Length: 6.40 cm
+   - Sepal Width: 3.30 cm
+   - Petal Length: 5.10 cm
+   - Petal Width: 1.80 cm
+
+8. Maximum (max):
+   - Sepal Length: 7.90 cm
+   - Sepal Width: 4.40 cm
+   - Petal Length: 6.90 cm
+   - Petal Width: 2.50 cm
+   - These values represent the largest recorded measurements in the dataset.
+
+
+
+Mean, Median, and Standard Deviation Values
+- Mean Values confirm the average measurements.
+- Median Values suggest that the data is slightly skewed since the means and medians are not exactly equal, particularly for petal length and width.
+- Standard Deviation Values show that petal length has the highest variability among the attributes.
+
+Summary of Findings
+1. Distribution:
+   - The distribution of measurements shows that most flower measurements are clustered around the mean values, but there is notable variability, especially in petal length.
+
+2. Central Tendency:
+   - The mean and median values for all attributes are fairly close, suggesting that the data distribution is relatively normal for sepal length and width. However, petal dimensions show some skew.
+
+3. Variability:
+   - Petal length has the highest standard deviation, indicating it varies the most among the samples. This suggests that petal length may be a significant differentiator between iris species.
+
+4. Range of Measurements:
+   - The min and max values indicate that there is a wide range of measurements for all attributes, particularly for petal length and width.
+
+Conclusion
+The statistical summary of the Iris dataset provides valuable insights into the physical characteristics of iris flowers. The close relationship between mean and median suggests that the data is generally well behaved. 
+However, the variability in petal dimensions may suggest that they are critical features for distinguishing between different species of irises. Overall, this analysis sets the stage for further exploration and modeling, such as classification tasks to predict iris species based on these measurements.
+
+
+
+
+
+
+
+

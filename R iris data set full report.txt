@@ -1,0 +1,160 @@
+SUMMARY REPORT BY UKEME EDWARD ENIANG
+
+
+By running the code in R, you will get:
+
+A preview of the data using head().
+
+A detailed summary (min, max, mean, etc.) of each variable using summary().
+
+A breakdown of the data structure, including data types for each column, with str().
+
+
+
+DATA VISUALIZATION
+
+Pair Plot: Shows scatterplot matrices to explore relationships between features, colored by species.
+
+Boxplots: Visualize the distribution of each feature across the three species.
+
+Histograms: Show the distribution of each numerical feature.
+
+ADDITIONAL PLOT
+
+Density Plot: Provides another view of the distribution for each feature, showing overlap between species.
+
+
+
+
+STATISTICAL SUMMARY AND ISIGHTS
+
+Interpretation of the Descriptive Statistics
+Sepal Length:
+
+Mean: 5.84 cm (The average length of a sepal is 5.84 cm across all species).
+Median: 5.80 cm (Half the observations have a sepal length shorter than 5.80 cm, and half are longer).
+Standard Deviation: 0.828 (Sepal lengths are relatively close to the mean, with most values falling within ~0.83 cm from the mean).
+
+Sepal Width:
+
+Mean: 3.06 cm (The average width of a sepal is about 3.06 cm).
+Median: 3.00 cm (Half of the observations have sepal widths below 3.00 cm, and half are above).
+Standard Deviation: 0.436 (There is less variability in sepal width, with most values falling within ~0.44 cm of the mean).
+
+Petal Length:
+
+Mean: 3.76 cm (The average petal length across species is 3.76 cm).
+Median: 4.35 cm (There is a wider range in petal lengths, with half the values below 4.35 cm).
+Standard Deviation: 1.765 (Petal length has the highest variability, with a larger spread in values, which likely reflects differences between species).
+
+Petal Width:
+
+Mean: 1.20 cm (The average petal width across species is 1.20 cm).
+Median: 1.30 cm (Half of the values are below 1.30 cm).
+Standard Deviation: 0.762 (Like petal length, petal width also shows a higher degree of variability compared to the sepal measurements).
+
+Brief Insights:
+
+Sepal features (length and width) tend to have less variability (smaller standard deviations), suggesting that these measurements are more consistent across species.
+Petal features (length and width), on the other hand, exhibit greater variability (higher standard deviations), which could reflect significant differences in petal size among the three Iris species.
+The mean and median values are quite close for all features, indicating that the data is relatively symmetric for these variables, although petal measurements may have a slightly skewed distribution due to the large variability.
+These insights can be useful when interpreting the visualizations and applying machine learning algorithms, as features with greater variability may be more discriminative in classifying species.
+
+
+
+MACHINE LEARNING
+
+Here's how i implemented a k-Nearest Neighbors (k-NN) classifier for the Iris dataset, evaluate its accuracy, and display the confusion matrix using R.
+
+Steps:
+
+Split the Dataset into Training and Test Sets
+Implement k-NN Classifier
+Evaluate the Model (Accuracy and Confusion Matrix)
+Explanation of k-NN and Interpretation of Results
+
+
+
+
+Explanation of k-NN Algorithm and Interpretation of Results
+
+What is k-Nearest Neighbors (k-NN)?
+
+The k-Nearest Neighbors (k-NN) algorithm is a simple, non-parametric classification algorithm. The basic idea is:
+
+Given a new data point, the algorithm looks at the k nearest data points in the training set (based on a distance metric, usually Euclidean distance).
+It assigns the new data point to the class that is most common among its k nearest neighbors.
+In this example, we used k = 3, which means for each test data point, the algorithm checks the three nearest data points from the training set and assigns the majority class among them.
+
+Interpretation of Results
+
+Accuracy: The accuracy score will tell us the percentage of test data points that were correctly classified by the k-NN model. If, for example, the accuracy is 95%, it means the model correctly classified 95% of the test samples.
+
+Confusion Matrix:
+
+The confusion matrix gives a more detailed breakdown of the model's performance by showing how many test instances were correctly or incorrectly classified for each class.
+The diagonal elements (true positives) show how many samples from each class were correctly classified.
+Off-diagonal elements indicate misclassifications (e.g., how many Iris-setosa were predicted as Iris-versicolor).
+The confusion matrix helps identify if the model has more trouble classifying certain species compared to others.
+
+
+
+
+
+REPORT SUBMISSION 
+
+Project Title: Iris Dataset Analysis and Classification
+Group Members: [Karis Anoruo, Ukeme Eniang, Abba Akinola, Olugbenga Boyede, Iseniyi Jude, Abdulhafeez Oricha, Khalid Ibitoye Oyeniran, Moses Ajetomobi]
+
+
+1. Introduction
+The Iris dataset is one of the most well-known datasets in machine learning and data science, consisting of 150 observations of iris flowers belonging to three species: Iris-setosa, Iris-versicolor, and Iris-virginica. Each flower is described by four features: sepal length, sepal width, petal length, and petal width. The purpose of this analysis is to explore the dataset, visualize relationships between the features, calculate basic statistics, and develop a k-Nearest Neighbors (k-NN) classifier to predict the species of an iris flower based on its features.
+
+2. Methodology
+Step 1: Data Import and Exploration
+
+The dataset was loaded using R’s built-in datasets::iris package.
+The structure of the dataset was examined using the summary() and str() functions to understand its dimensions, variables, and basic statistics.
+
+Step 2: Data Visualization
+
+A pair plot was created to visualize relationships between the four features (sepal length, sepal width, petal length, petal width) across species.
+Boxplots were generated to compare the distribution of each feature across the three species.
+Histograms and density plots were used to visualize the distribution of the numerical features and overlap between species.
+
+Step 3: Statistical Summary
+
+Basic statistical metrics, such as mean, median, and standard deviation, were calculated for each feature to summarize the central tendency and variability.
+
+Step 4: Classification Model (k-NN)
+
+The dataset was split into 70% training and 30% testing sets using the caTools package.
+The k-Nearest Neighbors (k-NN) algorithm was chosen for classification, with k = 3 based on its simplicity and effectiveness.
+The performance of the model was evaluated using accuracy and a confusion matrix to assess how well the classifier predicted the species of flowers in the test set.
+
+3. Results and Discussion
+Statistical Summary:
+
+Sepal features showed less variability compared to petal features, with smaller standard deviations.
+The mean sepal length was 5.84 cm, and the mean petal length was 3.76 cm, highlighting that petal measurements exhibit more diversity between species.
+
+Visualizations:
+
+The pair plot showed clear clustering of Iris-setosa, whereas there was some overlap between Iris-versicolor and Iris-virginica in both petal and sepal measurements.
+Boxplots indicated significant differences between the species in terms of petal length and petal width, which are likely strong indicators for classification.
+Histograms further confirmed that Iris-setosa is more distinct compared to the other two species based on most features.
+
+Model Performance:
+
+The k-NN model achieved an accuracy of 93.33 % on the test set, indicating that the classifier was effective in predicting the species of iris flowers.
+The confusion matrix showed that Iris-setosa was perfectly classified, while some misclassifications occurred between Iris-versicolor and Iris-virginica, suggesting that the latter two species are more similar in their feature distributions.
+
+4. Conclusion
+The Iris dataset is a classic example of how statistical analysis, visualization, and machine learning can be applied to classify data effectively. Through exploratory data analysis, we identified that petal features (especially petal length and petal width) play a crucial role in distinguishing the species. The k-NN classifier provided a high level of accuracy, particularly for Iris-setosa, although it struggled slightly to differentiate between Iris-versicolor and Iris-virginica.
+
+Future Recommendations:
+
+Investigating additional models, such as Support Vector Machines (SVM) or Random Forests, could improve classification performance for similar species.
+Applying dimensionality reduction techniques like Principal Component Analysis (PCA) might help to better visualize feature distinctions in the dataset.
+
+
